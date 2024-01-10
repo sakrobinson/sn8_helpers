@@ -3,7 +3,7 @@ Helper files for working with sn8 (time series prediction) on bittensor
 
 ---
 
-# Hugging Face Model Downloader
+# get_hf_models.py
 
 This script is designed to interact with the Hugging Face Hub to list and optionally download all files from a specified model repository. It is useful for users who wish to obtain model files for offline use or for integration into other applications.
 
