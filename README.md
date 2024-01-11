@@ -68,5 +68,60 @@ If you wish to download files from a different Hugging Face model repository or 
 - If the script fails to connect to the Hugging Face Hub, check your internet connection and any firewall or proxy settings that may be blocking access.
 
 ---
+Certainly! Below is a sample README text that explains the purpose and usage of the Bash script:
 
-Remember to save this documentation as `README.md` in the same directory as your script. This will allow users to view the instructions easily on platforms like GitHub, where Markdown is rendered when viewing the directory.
+---
+
+# Update Symbolic Links Script (update_links.sh)
+
+## Overview
+
+This script is designed to update symbolic links for `.h5` model files in the Hugging Face model repository. It corrects the paths of symbolic links that point to model files, ensuring they reference the correct absolute paths after being moved to a new location.
+
+## Prerequisites for update_links.sh
+
+Before running this script, ensure that you have:
+
+- A Bash shell environment.
+- The correct permissions to modify the files in the target directories.
+- downloaded .h5 files or links (use get_hf_models.py)
+
+## Usage of update_links.sh
+
+To use this script, follow these steps:
+
+1. Place the script in the root directory of your model files ("/root/time-series-prediction-subnet/mining_models"), or update the `base_dir` and `link_dir` variables in the script to match your directory structure.
+2. Make the script executable by running the following command in your terminal:
+
+    ```bash
+    chmod +x update_links.sh
+    ```
+
+3. Execute the script by running:
+
+    ```bash
+    ./update_links.sh
+    ```
+
+The script will automatically navigate to the directory containing the symbolic links, update each link to point to the correct absolute path of the target `.h5` file, and provide output for each updated link.
+
+## What update_links.sh Does
+
+- The script sets the base directory where the model files are expected to be (`base_dir`) and the directory containing the symbolic links (`link_dir`).
+- It navigates to the directory containing the symbolic links.
+- For each `.h5` symbolic link in the directory, the script:
+  - Reads the target of the symbolic link.
+  - Constructs the absolute path to the target file, assuming the target is relative to the link's location.
+  - Moves to the base directory.
+  - Removes the old symbolic link.
+  - Creates a new symbolic link with the absolute path.
+  - Prints a message indicating the update.
+  - Moves back to the links directory to continue the process for the next link.
+
+## update_links.sh Notes
+
+- The script assumes that the target paths provided by the symbolic links are relative to the location of the links themselves.
+- If the structure of your directories differs from the one expected by the script, you will need to modify the `base_dir` and `link_dir` variables accordingly.
+- It is recommended to back up your symbolic links and target files before running this script to prevent data loss in case of unexpected issues.
+
+---
