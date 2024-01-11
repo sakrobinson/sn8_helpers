@@ -27,7 +27,8 @@ if user_input == "yes":
         hf_hub_download(
             repo_id=model_repo,
             filename=filename,
-            cache_dir=target_directory  # This will download the file to the target directory
+            cache_dir=target_directory,  # This will download the file to the target directory
+            local_dir_use_symlinks=False
         )
         print(f"Downloaded {filename} to {target_directory}")
 else:
