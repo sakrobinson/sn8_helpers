@@ -167,7 +167,11 @@ btcli subnet register --netuid <YOUR_PREFERRED_NETUID> --wallet.name <YOUR_COLDK
 
 ### Optional: Use Registration Sniper
 
-Clone the registration sniper tool by evlar.
+Clone the registration sniper tool by evlar. (requires pexpect)
+
+```bash
+pip install pexpect
+```
 
 ```bash
 git clone https://github.com/evlar/registration_sniper.git
