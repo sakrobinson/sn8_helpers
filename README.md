@@ -12,7 +12,8 @@ This script is designed to interact with the Hugging Face Hub to list and option
 Before running the script, ensure that you have the following prerequisites installed:
 
 - Python 3.x
-- `huggingface_hub` library (can be installed via pip with `pip install huggingface_hub`)
+- `huggingface_hub` library (can be installed via pip with
+  ```pip install huggingface_hub```
 
 Additionally, you will need internet access to reach the Hugging Face Hub and permission to write to the target directory on your system.
 
