@@ -13,7 +13,9 @@ Before running the script, ensure that you have the following prerequisites inst
 
 - Python 3.x
 - `huggingface_hub` library (can be installed via pip with
-  ```pip install huggingface_hub```
+  ```bash
+  pip install huggingface_hub
+  ```
 
 Additionally, you will need internet access to reach the Hugging Face Hub and permission to write to the target directory on your system.
 
