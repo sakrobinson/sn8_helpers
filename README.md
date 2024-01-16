@@ -25,7 +25,7 @@ To use the script, follow these steps:
 3. Run the script using Python:
 
 ```bash
-python huggingface_model_downloader.py
+python3 get_hf_models.py
 ```
 
 The script will perform the following actions:
@@ -60,7 +60,7 @@ Once the download is complete, you can navigate to the target directory to verif
 
 ## Customization
 
-If you wish to download files from a different Hugging Face model repository or to a different target directory, modify the `model_repo` and `target_directory` variables in the script accordingly.
+If you need to download files from a different Hugging Face model repository or to a different target directory, modify the `model_repo` and `target_directory` variables in the script accordingly.
 
 ## Troubleshooting
 
@@ -68,9 +68,7 @@ If you wish to download files from a different Hugging Face model repository or 
 - If the script fails to connect to the Hugging Face Hub, check your internet connection and any firewall or proxy settings that may be blocking access.
 
 ---
-Certainly! Below is a sample README text that explains the purpose and usage of the Bash script:
 
----
 
 # Update Symbolic Links Script (update_links.sh)
 
